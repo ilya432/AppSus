@@ -5,20 +5,19 @@ const { Route, Switch } = ReactRouterDOM
 const { createBrowserHistory } = History
 const history = createBrowserHistory()
 
-
 class App extends React.Component {
 
     render() {
         return (
             <main>
                 <Router history={history}>
+            <Switch>
+               <Route component={Home} path="/" exact></Route>
+               <Route component={Home} path="/misster-mail" exact></Route>
+               <Route component={Home} path="/miss-notes" exact></Route>
 
-                    <Switch>
-                        <Route component={Home} path="/" exact></Route>
-
-
-                    </Switch>
-                </Router>
+            </Switch>
+         </Router>
             </main>
         )
     }

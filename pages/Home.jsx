@@ -4,6 +4,7 @@ export default class Home extends React.Component {
         return (
             <section>
                 <h1>HOME</h1>
+                srwerwrgw
             </section>
         )
     }

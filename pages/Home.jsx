@@ -6,7 +6,9 @@ export default class Home extends React.Component {
           {/* <h1>HOME</h1> */}
           <nav className="nav flex row">
             <div>
-              <span className="logo">Logo</span>
+              <img className="logo" src="./img/Logo.jpg">
+                {/* Logo */}
+              </img>
             </div>
 
             <div className="nav-links">links list</div>

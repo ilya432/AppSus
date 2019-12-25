@@ -1,0 +1,92 @@
+body{}
+
+/*helpers*/
+.flex {
+    display: flex;
+  }
+  .column {
+    flex-direction: column;
+  }
+  .row {
+    flex-direction: row;
+  }
+  .wrap {
+    flex-wrap: wrap;
+  }
+  .just-start {
+    justify-content: flex-start;
+  }
+  .just-end {
+    justify-content: flex-end;
+  }
+  /* helpers End */
+  
+
+.n-main-continer{
+    box-shadow:5px 10px 25px 2px grey ;
+    height: 100px;
+    width:100%;
+    background-color: aquamarine;
+  }
+  /*.n-logo-container{
+  }
+  .n-nav{
+  }
+  .n-logo-container{
+  } */
+  .n-logo{
+    height:70px;
+    width:70px;
+    padding: 15px 0 0 20px;
+  }
+
+.n-add-note-container{
+  position: relative;
+}
+.n-add-note-input{
+  background-color:#fff; 
+  display:block; 
+  height:60px;
+  width: 500px; 
+  /* box-sizing: border-box; */
+  outline: none;
+  border:none; 
+}
+
+/* .n-variations-container{
+} */
+.n-variation-img1{
+  position: absolute;
+   top: 2px; right: 5px;
+    height:20px;
+    width:20px;
+    margin: 0 125px 0 0;
+}
+.n-variation-img2{
+  position: absolute;
+   top: 2px; right: 5px;
+    height:20px;
+    width:20px;
+    margin: 0 95px 0 0;
+}
+.n-variation-img3{
+  position: absolute;
+   top: 2px; right: 5px;
+    height:20px;
+    width:20px;
+    margin: 0 65px 0 0;
+}
+.n-variation-img4{
+  position: absolute;
+   top: 2px; right: 5px;
+    height:20px;
+    width:20px;
+    margin: 0 35px 0 0;
+}
+.n-variation-img5{
+  position: absolute;
+   top: 2px; right: 5px;
+    height:20px;
+    width:20px;
+    margin: 0 5px 0 0;
+}

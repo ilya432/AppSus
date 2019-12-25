@@ -1,7 +1,8 @@
-body{}
+/* body{}
 
 /*helpers*/
-.flex {
+
+/* .flex {
     display: flex;
   }
   .column {
@@ -18,5 +19,16 @@ body{}
   }
   .just-end {
     justify-content: flex-end;
-  }
-  /* helpers End */
+  } */
+
+/* helpers End  */
+
+.e-email {
+  list-style: none;
+  border-bottom: solid 1 px;
+  border-bottom-style: dashed;
+}
+
+.e-read {
+  color: gray;
+}

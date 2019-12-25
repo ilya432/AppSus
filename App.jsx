@@ -1,4 +1,6 @@
 import Home from './pages/Home.jsx'
+import MisterEmailPage from './projects/misterEmail/pages/MisterEmailPage.jsx'
+
 
 const Router = ReactRouterDOM.HashRouter
 const { Route, Switch } = ReactRouterDOM
@@ -11,13 +13,11 @@ class App extends React.Component {
         return (
             <main>
                 <Router history={history}>
-            <Switch>
-               <Route component={Home} path="/" exact></Route>
-               <Route component={Home} path="/misster-mail" exact></Route>
-               <Route component={Home} path="/miss-notes" exact></Route>
-
-            </Switch>
-         </Router>
+                    <Switch>
+                        <Route component={Home} path="/" exact></Route>
+                        <Route component={MisterEmailPage} path="/mister-email" exact></Route>
+                    </Switch>
+                </Router>
             </main>
         )
     }

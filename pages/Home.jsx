@@ -1,19 +1,24 @@
+const { Link } = ReactRouterDOM;
 export default class Home extends React.Component {
   render() {
     return (
-      <section className="main-continer flex column">
-        <section>
-          {/* <h1>HOME</h1> */}
-          <nav className="nav flex row">
-            <div>
-              <img className="logo" src="./img/Logo.jpg">
-                {/* Logo */}
-              </img>
-            </div>
+      <section className="h-main-continer flex column">
+        <nav className="h-nav flex row between">
+          <div className="h-logo-container">
+            <img className="h-logo" src="./img/Logo.jpg"></img>
+          </div>
 
-            <div className="nav-links">links list</div>
-          </nav>
-        </section>
+          <div className="h-links-container">
+            <ul className="h-links-list flex row">
+              <li>
+                <Link to="/miss-notes">Miss-Notes</Link>
+              </li>
+              <li>
+                <Link to="/mister-email">Mister E-mail</Link>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </section>
     );
   }

@@ -1,10 +1,24 @@
 import Home from './pages/Home.jsx'
+
+const Router = ReactRouterDOM.HashRouter
+const { Route, Switch } = ReactRouterDOM
+const { createBrowserHistory } = History
+const history = createBrowserHistory()
+
+
 class App extends React.Component {
 
     render() {
         return (
             <main>
-                <Home />
+                <Router history={history}>
+
+                    <Switch>
+                        <Route component={Home} path="/" exact></Route>
+
+
+                    </Switch>
+                </Router>
             </main>
         )
     }
@@ -12,6 +26,6 @@ class App extends React.Component {
 
 
 ReactDOM.render(
-    <App/>,
+    <App />,
     document.getElementById('root')
 )

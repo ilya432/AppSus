@@ -1,5 +1,5 @@
 import Home from './pages/Home.jsx'
-
+import MissNotes from './projects/missNotes/pages/MissNotes.jsx'
 
 const Router = ReactRouterDOM.HashRouter
 const { Route, Switch } = ReactRouterDOM
@@ -14,8 +14,7 @@ class App extends React.Component {
                 <Router history={history}>
             <Switch>
                <Route component={Home} path="/" exact></Route>
-               <Route component={Home} path="/misster-mail" exact></Route>
-               <Route component={Home} path="/miss-notes" exact></Route>
+               <Route component={MissNotes} path="/miss-notes" exact></Route>
             </Switch>
          </Router>
             </main>

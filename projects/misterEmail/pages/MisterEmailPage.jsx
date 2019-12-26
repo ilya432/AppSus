@@ -10,7 +10,7 @@ export default class MisterEmailPage extends React.Component {
   componentDidMount() {
     this.loadEmailList();
   }
-  loadEmailList() {
+  loadEmailList = () => {
     let emailList = emailService.getEmailList().then(emailList => {
       console.log("Email List recieved from Service:", emailList);
       this.setState({ emailList });

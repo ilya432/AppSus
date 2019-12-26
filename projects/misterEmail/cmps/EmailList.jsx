@@ -10,7 +10,6 @@ export default class EmailList extends React.Component {
     }
 
     onSelectEmail = (email) => {
-        console.log('email selected ', email)
     }
 
     render() {
@@ -18,13 +17,14 @@ export default class EmailList extends React.Component {
         // const emailList = this.props.emailList
         console.log('email List in Email List Component:', this.props.emailList)
 
-        return <div>EMAIL - LIST
+        return (
 
-            {/* <EmailPreview emailList={this.props.emailList} /> */}
-
-            <ul className="e-emailList">
-                {this.props.emailList && this.props.emailList.map((email, i) =>
-                    <EmailPreview key={i} email={email} />)}</ul>
-        </div>
+            
+            <div>
+                <ul className="e-emailList">
+                    {this.props.emailList && this.props.emailList.map((email, i) =>
+                        <EmailPreview key={i} email={email} />)}</ul>
+            </div>
+        )
     }
 } 

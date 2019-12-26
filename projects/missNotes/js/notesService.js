@@ -1,7 +1,6 @@
 'use strict'
 
-import storageService from './utils'
-import utils from './utils.js'
+import storageService from './storageService,js'
 
 export default {
     getNotes,

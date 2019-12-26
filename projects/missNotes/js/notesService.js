@@ -1,6 +1,6 @@
 'use strict'
 
-import storageService from './storageService,js'
+import storageService from './storageService.js'
 
 export default {
     getNotes,

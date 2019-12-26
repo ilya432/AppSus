@@ -11,6 +11,6 @@ function load(key, defaultValue) {
 }
 
 export default {
-    saveToStorage,
-    loadFromStorage
+    store,
+    load
 }

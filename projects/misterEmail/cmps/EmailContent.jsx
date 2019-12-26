@@ -17,8 +17,13 @@ export default class EmailContent extends React.Component {
         console.log('PARAMS', this.props.match.params)
         let body = this.props.match.params;
         return (
+            <div>
+                <div key="5" className="email-content">Email Body: <p className="e-email-body">{body.content}</p> </div>
+                <Link to={`/email`}>
+                    <button>BACK</button>
+                </Link>
+            </div>
 
-            <div key="5" className="email-content">Email Body: <p className="e-email-body">{body.content}</p> </div>
         )
     }
 }

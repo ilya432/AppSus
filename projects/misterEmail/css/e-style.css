@@ -39,7 +39,7 @@
 
 .e-email-body {
   height: fit-content;
-  border-bottom: solid 1 px;
-  border-bottom-style: dashed;
+  /* border-bottom: solid 1 px; */
+  /* border-bottom-style: dashed; */
   border-color: grey;
 }

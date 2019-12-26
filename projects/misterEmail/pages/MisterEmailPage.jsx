@@ -8,6 +8,8 @@ export default class MisterEmailPage extends React.Component {
   };
 
   componentDidMount() {
+      console.log('got to email');
+      
     this.loadEmailList();
   }
   loadEmailList = () => {
@@ -17,8 +19,10 @@ export default class MisterEmailPage extends React.Component {
     });
   }
 
+
+
   render() {
-    console.log("this.state.emailList: ", this.state.emailList);
+    // console.log("this.state.emailList: ", this.state.emailList);
 
     return (
       <div>

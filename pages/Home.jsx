@@ -14,7 +14,7 @@ export default class Home extends React.Component {
                 <Link to="/notes">Miss-Notes</Link>
               </li>
               <li>
-                <Link to="/mister-email">Mister E-mail</Link>
+                <Link to="/email">Mister E-mail</Link>
               </li>
             </ul>
           </div>

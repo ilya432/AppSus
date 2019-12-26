@@ -19,7 +19,7 @@ export default class EmailContent extends React.Component {
         return (
             <div>
                 <div key="5" className="email-content">Email Body: <p className="e-email-body">{body.content}</p> </div>
-                <Link to={`/mister-email`}>
+                <Link to={`/email`}>
                     <button>BACK</button>
                 </Link>
             </div>

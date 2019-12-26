@@ -5,12 +5,18 @@ import emailService from '../js/emailService.js'
 export default class MisterEmailPage extends React.Component {
 
     state = {
-        emailList: []
+        emailList: [],
+        selectedEmail: {}
     }
 
     componentDidMount() {
         this.loadEmailList()
     }
+
+    setSelectedEmail(){
+
+    }
+    
     loadEmailList() {
         let emailList = emailService.getEmailList()
             .then(emailList => {

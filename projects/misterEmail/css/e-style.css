@@ -1,7 +1,8 @@
 /* body{} */
 
 /*helpers*/
-.flex {
+
+/* .flex {
     display: flex;
   }
   .column {
@@ -18,5 +19,28 @@
   }
   .just-end {
     justify-content: flex-end;
-  }
-  /* helpers End */
+  } */
+
+/* helpers End */
+
+.e-email {
+  list-style: none;
+  border-bottom: solid 1 px; 
+  border-bottom-style: dashed;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.e-read {
+  color: gray;
+}
+
+.e-email-body {
+  /* border-top: dashed 1px; */
+  /* border-color: grey; */
+  height: fit-content;
+  border-bottom: solid 1 px; 
+  border-bottom-style: dashed;
+    border-color: grey;
+
+}

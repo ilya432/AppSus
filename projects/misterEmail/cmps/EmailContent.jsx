@@ -1,4 +1,4 @@
-import EmailPreview from '../books/BookPreview.jsx'
+// import EmailPreview from './EmailPreview.jsx'
 
 const { Link } = ReactRouterDOM
 
@@ -13,12 +13,12 @@ export default class EmailContent extends React.Component {
     }
 
     render() {
-        return <div>
-            <div>Email Content</div>
-            <EmailPreview key="201" email={this.props.email} />
 
-            <div key="5" className="email-content">{this.props.email.content}</div>
+        console.log('PARAMS', this.props.match.params)
+        let body = this.props.match.params;
+        return (
 
-        </div>
+            <div key="5" className="email-content">Email Body: <p>{body.content}</p> </div>
+        )
     }
 }

@@ -17,6 +17,8 @@ export default class MisterEmailPage extends React.Component {
     });
   }
 
+  
+
   render() {
     console.log("this.state.emailList: ", this.state.emailList);
 

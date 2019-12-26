@@ -1,31 +1,36 @@
+import Top from "../cmps/Top.jsx";
 import AddNote from "../cmps/AddNote.jsx";
-// import showAllNotes from "../cmps/showAllNotes.jsx";
+
+import NotesService from "../js/notesService.js";
+import NotesList from "../cmps/NotesList.jsx";
 
 const { Link } = ReactRouterDOM;
 export default class MissNotes extends React.Component {
+  state = {
+    notes: [],
+    // filterBy: null
+  };
+  componentDidMount() {
+    this.loadNotes();
+  }
+
+  loadNotes = () => {
+    NotesService.getNotes(this.state.filterBy).then(notes => {
+      this.setState({ notes: notes });
+    });
+  };
+
+  // onFilter = filterBy => {
+  //   this.setState({ filterBy }, this.loadNotes);
+  // };
+
   render() {
     return (
-      <div className="n-main-continer flex column">
-        <section className="top">
-          <nav className="n-nav flex row between">
-            <div className="n-logo-container">
-              <img
-                className="n-logo"
-                src="./projects/missNotes/img/Logo.png"
-              ></img>
-            </div>
-
-            <div className="n-home-link">
-              <Link to="/">Back home</Link>
-            </div>
-          </nav>
-        </section>
-
-        {/* <section className="n-add-note-container flex column"> */}
+      <div className="n-main-container">
+        <Top />
         <AddNote />
-        {/* </section> */}
-
-        <section>{/* <showAllNotes /> */}</section>
+        {/* <Filter onFilter={this.onFilter}></Filter> */}
+        <NotesList notes={this.state.notes}></NotesList>
       </div>
     );
   }

@@ -1,5 +1,5 @@
 body{
-  background-color: rgb(184, 174, 174);
+  overflow-y: hidden;
 }
 
 /*helpers*/
@@ -23,8 +23,13 @@ body{
   }
   /* helpers End */
   
+.n-main-container{
+  height: 100%;
+  width:100%;
+  background-color: rgb(184, 174, 174);
+}
 
-.n-main-continer{
+.n-top-continer{
     box-shadow:5px 10px 25px 2px grey ;
     height: 100px;
     width:100%;
@@ -55,7 +60,14 @@ body{
   padding: 5px;
   height: 300px;
     width:100%;
-    /* background-color: peru; */
+    /* 
+    background-color: peru; */
+}
+.n-wrapper{
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  height:inherit;
 }
 .n-add-note-input{
   background-color:#fff; 
@@ -63,20 +75,24 @@ body{
   height:60px;
   width: 500px; 
   /* box-sizing: border-box; */
-  margin: 0 auto;
   outline: none;
   border:none; 
 }
-.n-variations-container{position: relative;}
+.n-variations-container{
+  position: absolute;
+  top:20px;
+  right:10px;
+}
 .n-variations-container img{
-  position: fixed; 
+  /* position: fixed;  */
   top: 30px; 
   right: 550px;
   height:20px;
   width:20px;  
+  margin:  0 5px 0 0;
 }
 
-
+/* 
 .n-variation-img1{ 
     margin: 0 125px 0 0;
 }
@@ -93,13 +109,12 @@ body{
 .n-variation-img5{  
     margin: 0 5px 0 0;
 }
-
+ */
 
 
 
 
 /* Main */
-
 /* notes */
 .n-note-image{
 

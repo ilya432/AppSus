@@ -11,7 +11,7 @@ export default class Home extends React.Component {
           <div className="h-links-container">
             <ul className="h-links-list flex row">
               <li>
-                <Link to="/miss-notes">Miss-Notes</Link>
+                <Link to="/notes">Miss-Notes</Link>
               </li>
               <li>
                 <Link to="/mister-email">Mister E-mail</Link>

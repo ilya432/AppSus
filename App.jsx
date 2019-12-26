@@ -17,10 +17,9 @@ class App extends React.Component {
                 <Router history={history}>
                     <Switch>
                         <Route component={Home} path="/" exact></Route>
-                        <Route component={MisterEmailPage} path="/mister-email" exact></Route>
+                        <Route component={MisterEmailPage} path="/email" exact></Route>
                         <Route component={EmailContent} path="/mister-email/email-content/:content" exact ></Route>
-                        <Route component={MissNotes} path="/miss-notes" exact></Route>
-                        
+                        <Route component={MissNotes} path="/notes" exact></Route>
                     </Switch>
                 </Router>
             </main>

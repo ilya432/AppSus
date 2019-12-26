@@ -9,39 +9,11 @@ export default {
     getNoteById,
     editNote
 };
-var notes = [
-    {
-        type: "NoteText",
-        isPinned: true,
-        info: {
-            txt: "Fullstack Me Baby!"
-        }
-    },
-    {
-        type: "NoteImg",
-        info: {
-            url: "http://some-img/me",
-            title: "Me playing Mi"
-        },
-        style: {
-            backgroundColor: "#00d"
-        }
-    },
-    {
-        type: "NoteTodos",
-        info: {
-            label: "How was it:",
-            todos: [
-                { txt: "Do that", doneAt: null },
-                { txt: "Do this", doneAt: 187111111 }
-            ]
-        }
-    }
-];
-let gNotes = storageService.load('notes') || createNotes(notes);
+
+let gNotes = storageService.load('notes') || createNotes();
 
 
-console.log(notes)
+console.log(gNotes)
 
 
 function editNote(id, name, imgUrl) {
@@ -76,12 +48,41 @@ function deleteNote(note) {
 function getNotes(filterBy) {
     const notes = (!filterBy) ?
         [...gNotes]
-        : gNotes.filter(note => note.name.includes(filterBy.lable));
-    // && note.numOfLegs === filterBy.numOfLegs);
+        : gNotes.filter(note => note.name.includes(filterBy.lable)
+            && note.numOfLegs === filterBy.numOfLegs);
 
     return Promise.resolve(notes)
 }
 function createNotes(notes) {
+    var notes = [
+        {
+            type: "NoteText",
+            isPinned: true,
+            info: {
+                txt: "Fullstack Me Baby!"
+            }
+        },
+        {
+            type: "NoteImg",
+            info: {
+                url: "http://some-img/me",
+                title: "Me playing Mi"
+            },
+            style: {
+                backgroundColor: "#00d"
+            }
+        },
+        {
+            type: "NoteTodos",
+            info: {
+                label: "How was it:",
+                todos: [
+                    { txt: "Do that", doneAt: null },
+                    { txt: "Do this", doneAt: 187111111 }
+                ]
+            }
+        }
+    ];
     storageService.store('notes', notes)
     return notes;
 }

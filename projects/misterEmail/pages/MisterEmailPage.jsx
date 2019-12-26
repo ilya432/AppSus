@@ -7,31 +7,10 @@ export default class MisterEmailPage extends React.Component {
     emailList: []
   };
 
-<<<<<<< HEAD
-    state = {
-        emailList: [],
-        selectedEmail: {}
-    }
-
-    componentDidMount() {
-        this.loadEmailList()
-    }
-
-    setSelectedEmail(){
-
-    }
-    
-    loadEmailList() {
-        let emailList = emailService.getEmailList()
-            .then(emailList => {
-                console.log('Email List recieved from Service:', emailList);
-                this.setState({ emailList })
-            })
-=======
   componentDidMount() {
     this.loadEmailList();
   }
-  loadEmailList() {
+  loadEmailList = () => {
     let emailList = emailService.getEmailList().then(emailList => {
       console.log("Email List recieved from Service:", emailList);
       this.setState({ emailList });
@@ -40,7 +19,6 @@ export default class MisterEmailPage extends React.Component {
 
   render() {
     console.log("this.state.emailList: ", this.state.emailList);
->>>>>>> 153884e35d4d78395dba5c71e3ad868331c67028
 
     return (
       <div>

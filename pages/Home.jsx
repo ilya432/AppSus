@@ -5,7 +5,7 @@ export default class Home extends React.Component {
       <section className="h-main-continer flex column">
         <nav className="h-nav flex row between">
           <div className="h-logo-container">
-            <img className="h-logo" src="./img/Logo.jpg"></img>
+            <img className="h-logo" src="./img/Logo.png"></img>
           </div>
 
           <div className="h-links-container">

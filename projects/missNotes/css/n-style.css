@@ -58,7 +58,7 @@ body{
   position: relative;
   margin: 10px auto;
   padding: 5px;
-  height: 300px;
+  height: 60px;
     width:100%;
     /* 
     background-color: peru; */
@@ -92,35 +92,38 @@ body{
   margin:  0 5px 0 0;
 }
 
-/* 
-.n-variation-img1{ 
-    margin: 0 125px 0 0;
-}
-
-.n-variation-img2{ 
-    margin: 0 95px 0 0;
-}
-.n-variation-img3{ 
-    margin: 0 65px 0 0;
-}
-.n-variation-img4{
-    margin: 0 35px 0 0;
-}
-.n-variation-img5{  
-    margin: 0 5px 0 0;
-}
- */
-
-
-
-
 /* Main */
+
 /* notes */
-.n-note-image{
-
+.n-all-notes{
+  width:100%;
+  height:auto;
 }
-.n-note-txt{
+.n-note{
+  height:auto;
+  width:auto;
+  margin: 5px;
+  background-color: lightcoral;
+  border:1px solid black;
+}.n-note-lable-container{
+  height:auto;
+  background-color: khaki;
+}.n-note-lable{  
+  color: blueviolet;
+  font-weight: bolder;
+}
 
+.n-image-note{  
+
+}.n-note-image {
+  height:300px;
+  width:100%;
+  border:1px black solid;
+}
+
+.n-note-text{
+  
+}.n-note-text-container{
 }
 /* notes Ens */
 

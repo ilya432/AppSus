@@ -65,7 +65,7 @@ function createNotes(notes) {
         {
             type: "NoteImg",
             info: {
-                url: "http://some-img/me",
+                url: "https://pbs.twimg.com/profile_images/1128816941718691840/kj7svD_2_400x400.jpg",
                 title: "Me playing Mi"
             },
             style: {

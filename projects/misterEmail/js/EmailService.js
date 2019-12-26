@@ -1,6 +1,6 @@
-export default  {
-   getEmailList
-  };
+export default {
+    getEmailList
+};
 
 
 let gEmailList = [

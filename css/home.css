@@ -1,6 +1,6 @@
 body{margin: 0;}
 ul{list-style-type: none; margin: 0; padding: 0;}
-a{text-decoration: none; color: cornflowerblue; font-size: 23px;}
+a{text-decoration: none; font-size: 23px;}
 /*helpers*/
 .flex {
     display: flex;
@@ -34,10 +34,8 @@ a{text-decoration: none; color: cornflowerblue; font-size: 23px;}
   /* .h-logo-container{
     } */
   .h-logo{
-    height:60px;
-    width:60px;
-    padding: 20px;
-    background-color: brown;
+    height:100px;
+    width:100px;
   }
   .h-links-container{align-self: center; }
   .h-links-list li {padding: 10px; margin: 0 20px 0 0;}

@@ -1,4 +1,6 @@
-body{}
+body{
+  background-color: rgb(184, 174, 174);
+}
 
 /*helpers*/
 .flex {
@@ -40,8 +42,20 @@ body{}
     padding: 15px 0 0 20px;
   }
 
+  .n-home-link{
+    padding: 10px;
+    margin: 0 20px 0 0;
+    align-self: center;
+  }
+
+
 .n-add-note-container{
   position: relative;
+  margin: 10px auto;
+  padding: 5px;
+  height: 300px;
+    width:100%;
+    /* background-color: peru; */
 }
 .n-add-note-input{
   background-color:#fff; 
@@ -49,44 +63,50 @@ body{}
   height:60px;
   width: 500px; 
   /* box-sizing: border-box; */
+  margin: 0 auto;
   outline: none;
   border:none; 
 }
+.n-variations-container{position: relative;}
+.n-variations-container img{
+  position: fixed; 
+  top: 30px; 
+  right: 550px;
+  height:20px;
+  width:20px;  
+}
 
-/* .n-variations-container{
-} */
-.n-variation-img1{
-  position: absolute;
-   top: 2px; right: 5px;
-    height:20px;
-    width:20px;
+
+.n-variation-img1{ 
     margin: 0 125px 0 0;
 }
-.n-variation-img2{
-  position: absolute;
-   top: 2px; right: 5px;
-    height:20px;
-    width:20px;
+
+.n-variation-img2{ 
     margin: 0 95px 0 0;
 }
-.n-variation-img3{
-  position: absolute;
-   top: 2px; right: 5px;
-    height:20px;
-    width:20px;
+.n-variation-img3{ 
     margin: 0 65px 0 0;
 }
 .n-variation-img4{
-  position: absolute;
-   top: 2px; right: 5px;
-    height:20px;
-    width:20px;
     margin: 0 35px 0 0;
 }
-.n-variation-img5{
-  position: absolute;
-   top: 2px; right: 5px;
-    height:20px;
-    width:20px;
+.n-variation-img5{  
     margin: 0 5px 0 0;
 }
+
+
+
+
+
+/* Main */
+
+/* notes */
+.n-note-image{
+
+}
+.n-note-txt{
+
+}
+/* notes Ens */
+
+/* main End */

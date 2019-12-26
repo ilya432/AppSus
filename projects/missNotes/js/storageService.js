@@ -1,11 +1,11 @@
 'use strict'
 
-function saveToStorage(key, value) {
+function store(key, value) {
     var str = JSON.stringify(value);
     localStorage.setItem(key, str);
 }
 
-function loadFromStorage(key, defaultValue) {
+function load(key, defaultValue) {
     var str = localStorage.getItem(key);
     return str ? JSON.parse(str) : defaultValue
 }

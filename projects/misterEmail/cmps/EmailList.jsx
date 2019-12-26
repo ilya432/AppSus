@@ -19,11 +19,11 @@ export default class EmailList extends React.Component {
 
         return (
 
-            
             <div>
                 <ul className="e-emailList">
                     {this.props.emailList && this.props.emailList.map((email, i) =>
-                        <EmailPreview key={i} email={email} />)}</ul>
+                        <EmailPreview key={i} email={email} />)}
+                </ul>
             </div>
         )
     }

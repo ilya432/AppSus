@@ -3,10 +3,13 @@ import emailStorageService from '../js/emailStorageService.js'
 export default {
     getEmailList,
     findEmailById,
-    markEmailAsRead
+    markEmailAsRead,
+    deleteEmail
 }
 
 let gId = 1;
+
+let gCurrEmail = {};
 
 let gEmailList = [
     {
@@ -47,6 +50,8 @@ function markEmailAsRead(emailId) {
     emailToMark.isRead = true;
     console.log('gEmailList after marking email as read:', gEmailList)
     emailStorageService.saveToStorage('gEmailList', gEmailList);
+    gCurrEmail = emailToMark;
+    updateEmailStatus()
 }
 
 function findEmailById(emailId) {
@@ -58,3 +63,17 @@ function findEmailById(emailId) {
     return email
 }
 console.log('EMAILS: ', gEmailList)
+
+function deleteEmail() {
+    console.log('Email To Delete: ', gCurrEmail);
+    let updatedEmailList = gEmailList.filter(email => email.id !== gCurrEmail.id);
+    gEmailList = updatedEmailList;
+    emailStorageService.saveToStorage('gEmailList', gEmailList);
+    console.log('Updated Email List After Deleting: ', gEmailList);
+    console.log('Updated List from storage: ', emailStorageService.loadFromStorage('gEmailList'))
+}
+
+function updateEmailStatus() {
+    let emailsAmount = gEmailList.length;
+    console.log('Emails Amount: ', emailsAmount)
+}

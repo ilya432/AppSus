@@ -1,12 +1,10 @@
 import emailStorageService from '../js/emailStorageService.js'
 
-
-
 export default {
     getEmailList,
     findEmailById,
     markEmailAsRead
-};
+}
 
 let gId = 1;
 
@@ -34,10 +32,9 @@ let gEmailList = [
         id: gId++
 
     }
-];
+]
 
 function getEmailList() {
-
     let emailList = emailStorageService.loadFromStorage('gEmailList')
     console.log('EMAIL LIST FROM STORAGE', emailList)
 
@@ -60,7 +57,4 @@ function findEmailById(emailId) {
     console.log('email FOUND BY ID: ', email);
     return email
 }
-console.log('EMAILS: ', gEmailList);
-
-
-
+console.log('EMAILS: ', gEmailList)

@@ -75,7 +75,7 @@ function createNotes(notes) {
         {
             type: "NoteTodos",
             info: {
-                label: "How was it:",
+                label: "work on a project:",
                 todos: [
                     { txt: "Do that", doneAt: null },
                     { txt: "Do this", doneAt: 187111111 }

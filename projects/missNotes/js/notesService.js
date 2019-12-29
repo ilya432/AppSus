@@ -1,5 +1,4 @@
 'use strict'
-<<<<<<< HEAD
 import storageService from './storageService.js'
 import Note from './Note.js'
 import utils from "./utils.js"
@@ -19,23 +18,6 @@ export default {
 };
 
 loadNotes()
-=======
-
-import storageService from './storageService.js'
-
-export default {
-    getNotes,
-    deleteNote,
-    addNote,
-    getNoteById,
-    editNote
-};
-
-let gNotes = storageService.load('notes') || createNotes();
-
-
-console.log(gNotes)
->>>>>>> 09a09c5a486979cc88993b83433ec67c8b14deb1
 
 
 function editNote(id, name, imgUrl) {
@@ -46,11 +28,7 @@ function editNote(id, name, imgUrl) {
     // gNotes = gNotes.map(note=>  note);
     gNotes = gNotes.map(note => editNote.id === note.id ? editNote : note);
 
-<<<<<<< HEAD
     saveNotes();
-=======
-    storageService.store('notes', gNotes)
->>>>>>> 09a09c5a486979cc88993b83433ec67c8b14deb1
 
     return Promise.resolve(editNote)
 }
@@ -59,7 +37,6 @@ function getNoteById(noteId) {
 
     return Promise.resolve(note)
 }
-<<<<<<< HEAD
 function addTextNote(type, txt, label, url, dodos, bgColor) {
     gNextId++;
     const newNote = new Note(gNextId, type, txt, label, url, dodos, bgColor)
@@ -95,43 +72,20 @@ function deleteNote(noteId) {
     storageService.store('gNextId', gNextId)
     console.log(gNotes)
     return Promise.resolve(gNotes)
-=======
-function addNote(name, imgURL) {
-    const newNote = new Note(name, imgURL, 'kjgkj')
-    gNotes = [...gNotes, newNote]
-    storageService.store('notes', gNotes)
-
-    return Promise.resolve(newNote)
-}
-function deleteNote(note) {
-    gNotes = gNotes.filter((currNote) => currNote.id !== note.id)
-    storageService.store('notes', gNotes)
-    return Promise.resolve(true)
->>>>>>> 09a09c5a486979cc88993b83433ec67c8b14deb1
 }
 function getNotes(filterBy) {
     const notes = (!filterBy) ?
         [...gNotes]
-<<<<<<< HEAD
         : gNotes.filter(note => note.name.includes(filterBy.lable));
     // && note.numOfLegs === filterBy.numOfLegs
-=======
-        : gNotes.filter(note => note.name.includes(filterBy.lable)
-            && note.numOfLegs === filterBy.numOfLegs);
->>>>>>> 09a09c5a486979cc88993b83433ec67c8b14deb1
 
     return Promise.resolve(notes)
 }
 function createNotes(notes) {
-<<<<<<< HEAD
 
     var notes = [
         {
             id: gNextId++,
-=======
-    var notes = [
-        {
->>>>>>> 09a09c5a486979cc88993b83433ec67c8b14deb1
             type: "NoteText",
             isPinned: true,
             info: {
@@ -139,16 +93,12 @@ function createNotes(notes) {
             }
         },
         {
-<<<<<<< HEAD
             id: gNextId++,
-=======
->>>>>>> 09a09c5a486979cc88993b83433ec67c8b14deb1
             type: "NoteTodos",
             info: {
                 label: "work on a project:",
                 todos: [
                     { txt: "Do stuff", doneAt: null },
-<<<<<<< HEAD
                     { txt: "Do it", doneAt: 18711461 },
                     { txt: "Do it 2", doneAt: 18711461 },
                     { txt: "Do it 3", doneAt: 18711461 },
@@ -165,31 +115,14 @@ function createNotes(notes) {
         },
         {
             id: gNextId++,
-=======
-                    { txt: "Do it", doneAt: 18711461 }
-                ]
-            }
-        }, {
-            type: "NoteText",
-            isPinned: true,
-            info: {
-                txt: "Fullstack Me Baby!"
-            }
-        },
-        {
->>>>>>> 09a09c5a486979cc88993b83433ec67c8b14deb1
             type: "NoteText",
             isPinned: true,
             info: {
                 txt: "lskjdhlsakgh adlfkjaedflejkfnalkfn aldfandl fkaenflaekfn"
             }
-<<<<<<< HEAD
         },
         {
             id: gNextId++,
-=======
-        }, {
->>>>>>> 09a09c5a486979cc88993b83433ec67c8b14deb1
             type: "NoteImg",
             info: {
                 url: "https://pbs.twimg.com/profile_images/1128816941718691840/kj7svD_2_400x400.jpg",
@@ -200,10 +133,7 @@ function createNotes(notes) {
             }
         },
         {
-<<<<<<< HEAD
             id: gNextId++,
-=======
->>>>>>> 09a09c5a486979cc88993b83433ec67c8b14deb1
             type: "NoteTodos",
             info: {
                 label: "work on a project:",
@@ -215,7 +145,6 @@ function createNotes(notes) {
         }
     ];
     storageService.store('notes', notes)
-<<<<<<< HEAD
     storageService.store('gNextId', gNextId);
     return notes;
 }
@@ -264,12 +193,6 @@ function saveImages(event) {
         }
     }
 }
-=======
-    return notes;
-}
-
-
->>>>>>> 09a09c5a486979cc88993b83433ec67c8b14deb1
 
 
 

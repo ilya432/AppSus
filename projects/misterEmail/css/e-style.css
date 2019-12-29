@@ -23,8 +23,6 @@
 
 /* helpers End */
 
-
-
 .e-email {
   list-style: none;
   border-bottom: solid 1 px;
@@ -42,4 +40,13 @@
   /* border-bottom: solid 1 px; */
   /* border-bottom-style: dashed; */
   border-color: grey;
+}
+
+.e-new-message {
+  min-height: 200px;
+  min-width: 200x;
+}
+
+.hidden{
+  display: none
 }

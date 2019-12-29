@@ -1,14 +1,14 @@
 const { Link } = ReactRouterDOM;
 import NoteTxt from './NoteTxt.jsx'
 import NoteImg from './NoteImg.jsx'
-import NoteTodo from './NoteTodo.jsx'
+import NoteTodo from './NoteTodos.jsx'
 
 export default class NotePreview extends React.Component {
 
 
-    onSelectNote = () => {
-        if (this.props.onSelectNote) this.props.onSelectNote(this.props.note);
-    };
+    // onSelectNote = () => {
+    //     if (this.props.onSelectNote) this.props.onSelectNote(this.props.note);
+    // };
     render() {
         // const props = this.props;
         // const { props } = this;
@@ -19,8 +19,8 @@ export default class NotePreview extends React.Component {
                     return <NoteTxt {...this.props}></NoteTxt>
                 case 'NoteImg':
                     return <NoteImg {...this.props}></NoteImg>
-                // case 'NoteTodos':
-                //     return <div> {...props}</div>
+                case 'NoteTodos':
+                    return <NoteTodo {...this.props}></NoteTodo>
                 default:
                     return <div>'dfdf'</div>
             }

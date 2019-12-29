@@ -16,19 +16,20 @@ export default class NotePreview extends React.Component {
         const DynamicCmp = (props) => {
             switch (this.props.note.type) {
                 case 'NoteText':
-                    return <NoteTxt {...this.props}></NoteTxt>
+                    return <NoteTxt className="note-item" {...this.props}></NoteTxt>
                 case 'NoteImg':
-                    return <NoteImg {...this.props}></NoteImg>
+                    return <NoteImg className="note-item" {...this.props}></NoteImg>
                 case 'NoteTodos':
-                    return <NoteTodo {...this.props}></NoteTodo>
+                    return <NoteTodo className="note-item" {...this.props}></NoteTodo>
                 default:
                     return <div>'dfdf'</div>
             }
+
         }
         return (this.props.note && <div>
 
             {/* <Link to={`/notes/${props.note.id}`}> */}
-            <DynamicCmp />
+            <DynamicCmp note={this.props.note} />
             {/* </Link> */}
         </div>
         );

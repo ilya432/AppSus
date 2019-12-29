@@ -1,4 +1,9 @@
 'use strict'
+export default {
+    getImgName,
+    removeFocusOnImportance,
+    arrayMove
+}
 var gIsConfirmPop = false;
 function getImgName(src) {
     var filename = src.replace(/^.*[\\\/]/, '');//with extension
@@ -65,3 +70,17 @@ function getImportanceNumber(gImportanceLevel) {
     }
     return LvlNum;
 }
+
+
+function arrayMove(arr, old_index, new_index) {
+    debugger
+    if (new_index >= arr.length) {
+        var k = new_index - arr.length + 1;
+        while (k--) {
+            arr.push(undefined);
+        }
+    }
+    arr.splice(new_index, 0, arr.splice(old_index, 1)[0]);
+    return arr; // for testing
+};
+

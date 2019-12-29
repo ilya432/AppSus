@@ -1,8 +1,6 @@
 // import EmailPreview from './EmailPreview.jsx'
 import EmailService, { gReadEmailPercent } from '../js/EmailService.js'
-
 const { Link } = ReactRouterDOM
-
 export default class EmailContent extends React.Component {
     state = {
         email: {},
@@ -11,16 +9,13 @@ export default class EmailContent extends React.Component {
         subject: '',
         id: ''
     }
-
     componentDidMount() {
-
         let emailContent = this.props.match.params.content.split('&');
         let emailBody = emailContent[0];
         let emailSubject = emailContent[1];
         let emailId = emailContent[2]
         this.setState({ body: emailBody, subject: emailSubject, id: emailId })
     }
-
     render() {
         let body = this.state.body
         let subject = this.state.subject
@@ -40,7 +35,6 @@ export default class EmailContent extends React.Component {
                 </Link>
                 {/* <EmailCompose/> */}
             </div>
-
         )
     }
 }

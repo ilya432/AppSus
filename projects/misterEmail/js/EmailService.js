@@ -110,10 +110,7 @@ function markEmailAsRead(emailId) {
 }
 
 function findEmailById(emailId) {
-   gEmailList = loadEmailListFromStorage('gEmailList')
-    console.log('FIND BY ID: ', emailId)
     let email = gEmailList.find(email => email.id === emailId)
-    console.log('FOUND BY ID: ',email, 'gEmailList', gEmailList )
     return email
 }
 

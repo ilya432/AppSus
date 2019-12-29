@@ -1,5 +1,5 @@
-import AddNote from "../cmps/AddNote.jsx";
-// import showAllNotes from "../cmps/showAllNotes.jsx";
+import Search from "../cmps/Search.jsx";
+
 
 const { Link } = ReactRouterDOM;
 export default class Top extends React.Component {
@@ -13,6 +13,10 @@ export default class Top extends React.Component {
                 className="n-logo"
                 src="./projects/missNotes/img/Logo.png"
               ></img>
+            </div>
+
+            <div>
+              <Search />
             </div>
 
             <div className="n-home-link">

@@ -1,19 +1,14 @@
-// const { Link } = ReactRouterDOM;
+const { Link } = ReactRouterDOM;
 import NoteTxt from './NoteTxt.jsx'
 import NoteImg from './NoteImg.jsx'
 import NoteTodo from './NoteTodos.jsx'
 
 export default class NotePreview extends React.Component {
 
-    // state = {
-    //     note: {},
-    //     // filterBy: null
-    // };
 
     // onSelectNote = () => {
     //     if (this.props.onSelectNote) this.props.onSelectNote(this.props.note);
     // };
-
     render() {
         // const props = this.props;
         // const { props } = this;

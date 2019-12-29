@@ -16,7 +16,7 @@ export default class EmailStatus extends React.Component {
 
         return (
             <div>
-                Email Status
+                Read Emails Percent: {this.props.readEmailPercent}
             </div>
 
         )

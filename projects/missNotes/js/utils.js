@@ -1,9 +1,12 @@
 'use strict'
+<<<<<<< HEAD
 export default {
     getImgName,
     removeFocusOnImportance,
     arrayMove
 }
+=======
+>>>>>>> 09a09c5a486979cc88993b83433ec67c8b14deb1
 var gIsConfirmPop = false;
 function getImgName(src) {
     var filename = src.replace(/^.*[\\\/]/, '');//with extension
@@ -69,6 +72,7 @@ function getImportanceNumber(gImportanceLevel) {
             break;
     }
     return LvlNum;
+<<<<<<< HEAD
 }
 
 
@@ -84,3 +88,6 @@ function arrayMove(arr, old_index, new_index) {
     return arr; // for testing
 };
 
+=======
+}
+>>>>>>> 09a09c5a486979cc88993b83433ec67c8b14deb1

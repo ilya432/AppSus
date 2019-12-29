@@ -95,18 +95,26 @@ body{
 /* Main */
 
 /* notes */
-.n-all-notes{
+.n-notes-container{
+  width:80%;
+  margin: 0 auto;
+}
+.n-notes-list{
   width:100%;
-  height:auto;
+  height:100%;
+  justify-content: space-around;
 }
 .n-note{
-  height:auto;
-  width:auto;
+  min-height:100px;
+  width:250px;
   margin: 5px;
   background-color: lightcoral;
   border:1px solid black;
+  
+}.n-text-note{justify-content: center;
 }
-.n-note-lable-container{
+
+.n-note-header{
   height:auto;
   background-color: khaki;
 }
@@ -118,14 +126,19 @@ body{
 .n-image-note{  
 
 }.n-note-image {
-  height:300px;
+  height:250px;
   width:100%;
   border:1px black solid;
 }
 
-.n-note-text{
+.n-note-text-container{
+}.n-note-text{
+  padding: 5px;
+  max-width: 100px;
   
-}.n-note-text-container{
+  white-space: pre-wrap;
+  
+  padding: 20px;
 }
 /* notes Ens */
 

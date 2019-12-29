@@ -63,6 +63,28 @@ function createNotes(notes) {
             }
         },
         {
+            type: "NoteTodos",
+            info: {
+                label: "work on a project:",
+                todos: [
+                    { txt: "Do stuff", doneAt: null },
+                    { txt: "Do it", doneAt: 18711461 }
+                ]
+            }
+        }, {
+            type: "NoteText",
+            isPinned: true,
+            info: {
+                txt: "Fullstack Me Baby!"
+            }
+        },
+        {
+            type: "NoteText",
+            isPinned: true,
+            info: {
+                txt: "lskjdhlsakgh adlfkjaedflejkfnalkfn aldfandl fkaenflaekfn"
+            }
+        }, {
             type: "NoteImg",
             info: {
                 url: "https://pbs.twimg.com/profile_images/1128816941718691840/kj7svD_2_400x400.jpg",

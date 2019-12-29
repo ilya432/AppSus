@@ -1,25 +1,26 @@
 // 'use strict'
 
 export default class Note {
-
-    constructor(type, txt, label) {
-        this.id = getRandomID();
+    // static nextId = 1;
+    constructor(id, type, txt, label, url, todos, background) {
+        this.id = id;
         this.type = type;
+        this.isPinned = false;
         this.info = {
+            label: label,
             txt: txt,
             url: url,
-            label: label,
-            todos: [
-                { txt: "Do that", doneAt: null },
-                { txt: "Do this", doneAt: 187111111 }
-            ]
+            todos: todos
         };
         this.style = {
             background: background
         }
-        this.isPinned = false;
-
     }
 }
+
+// [
+//     { txt: "Do that", doneAt: null },
+//     { txt: "Do this", doneAt: 187111111 }
+// ]
 
 
